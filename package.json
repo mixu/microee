@@ -1,0 +1,21 @@
+{
+  "name": "microee",
+  "description": "A tiny EventEmitter-like client and server side library",
+  "version": "0.0.1",
+  "author": {
+    "name": "Mikito Takada",
+    "email": "mixu@mixu.net",
+    "url": "http://mixu.net/"
+  },
+  "keywords": [
+    "eventemitter"
+  ],
+  "repository": "git://github.com/mixu/microee",
+  "main": "miniee.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --ui exports --reporter spec --bail ./test/microee.test.js"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
