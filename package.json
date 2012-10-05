@@ -11,7 +11,7 @@
     "event", "events", "eventemitter", "emitter"
   ],
   "repository": "git://github.com/mixu/microee",
-  "main": "miniee.js",
+  "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --ui exports --reporter spec --bail ./test/microee.test.js"
   },
