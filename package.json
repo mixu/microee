@@ -1,14 +1,17 @@
 {
   "name": "microee",
   "description": "A tiny EventEmitter-like client and server side library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Mikito Takada",
     "email": "mixu@mixu.net",
     "url": "http://mixu.net/"
   },
   "keywords": [
-    "event", "events", "eventemitter", "emitter"
+    "event",
+    "events",
+    "eventemitter",
+    "emitter"
   ],
   "repository": "git://github.com/mixu/microee",
   "main": "index.js",
