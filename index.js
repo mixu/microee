@@ -7,7 +7,6 @@ M.prototype = {
     return this;
   },
   removeListener: function(ev, cb) {
-    console.log('removelistener', ev)
     var e = this._events[ev] || [], i;
     for(i = e.length-1; i >= 0 && e[i]; i--){
       if(e[i] === cb || e[i].cb === cb) { e.splice(i, 1); }
