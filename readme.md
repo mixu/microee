@@ -2,11 +2,11 @@
 
 A client and server side library for routing events.
 
-I was disgusted by the size of MiniEE (122 sloc, 4.4kb), so I decided a rewrite was in order.
+I was disgusted by the size of [MiniEE](https://github.com/mixu/miniee) (122 sloc, 4.4kb), so I decided a rewrite was in order.
 
 This time, without the support for regular expressions - but still with the support for "when", which is my favorite addition to EventEmitters.
 
-MicroEE is a more satisfying (42 sloc, 1.3 kb), and passes the same tests as MiniEE (excluding the RegExp support, but including slightly tricky ones like removing once() callbacks using removeListener). It doesn't assume that Array.indexOf is available, since that function does not exist in old IEs.
+MicroEE is a more satisfying (42 sloc, ~1100 characters), and passes the same tests as MiniEE (excluding the RegExp support, but including slightly tricky ones like removing once() callbacks using removeListener). It doesn't assume that Array.indexOf is available, since that function does not exist in old IEs.
 
 # Installing:
 

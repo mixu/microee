@@ -8,7 +8,7 @@
     "url": "http://mixu.net/"
   },
   "keywords": [
-    "eventemitter"
+    "event", "events", "eventemitter", "emitter"
   ],
   "repository": "git://github.com/mixu/microee",
   "main": "miniee.js",

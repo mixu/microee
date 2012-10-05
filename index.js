@@ -16,8 +16,7 @@ M.prototype = {
     else { this._events[ev] && (this._events[ev] = []); }
   },
   emit: function(ev) {
-    var args = Array.prototype.slice.call(arguments, 1), i,
-        e = this._events[ev] || [];
+    var args = Array.prototype.slice.call(arguments, 1), i, e = this._events[ev] || [];
     for(i = e.length-1; i >= 0 && e[i]; i--){
       e[i].apply(this, args);
     }
@@ -27,16 +26,14 @@ M.prototype = {
     return this.once(ev, cb, true);
   },
   once: function(ev, cb, when) {
-    var c = (when ? w : o);
-    function w() { cb && cb.apply(this, arguments) && this.removeListener(ev, c); }
-    function o() { cb && cb.apply(this, arguments); this.removeListener(ev, c); }
+    function c() { cb && (cb.apply(this, arguments) || !when) && this.removeListener(ev, c); }
     c.cb = cb;
     this.on(ev, c);
     return this;
   },
   mixin: function(dest) {
-    var o = M.prototype;
-    for (var k in o) {
+    var o = M.prototype, k;
+    for (k in o) {
       o.hasOwnProperty(k) && (dest.prototype[k] = o[k]);
     }
   }
