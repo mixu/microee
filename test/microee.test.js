@@ -4,7 +4,7 @@ var assert = require('assert'),
 // set and emit an event using a string
 
 var ee;
-exports['given a new miniee'] = {
+exports['given a microee'] = {
 
   beforeEach: function(done) {
     ee = new MiniEventEmitter();
