@@ -1,4 +1,4 @@
-# MicroEE
+# microEE
 
 A client and server side library for routing events.
 
@@ -6,7 +6,7 @@ I was disgusted by the size of [MiniEE](https://github.com/mixu/miniee) (122 slo
 
 This time, without the support for regular expressions - but still with the support for "when", which is my favorite addition to EventEmitters.
 
-MicroEE is a more satisfying (42 sloc, ~1100 characters), and passes the same tests as MiniEE (excluding the RegExp support, but including slightly tricky ones like removing callbacks set via once() using removeListener where function equality checks are a bit tricky).
+MicroEE is a more satisfying (~50 sloc, ~1200 characters), and passes the same tests as MiniEE (excluding the RegExp support, but including many real-world tests, such as removing a once() callback, and checking for the correct order of once callback removal).
 
 # Installing:
 
