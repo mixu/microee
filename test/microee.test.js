@@ -109,6 +109,18 @@ exports['given a microee'] = {
     setTimeout(function() {
       done();
     }, 10);
+  },
+
+  'once() should remove the listener before running the callback, not after': function(done) {
+    ee.once('ready', function() {
+      console.log('called 1');
+      ee.once('ready', function() {
+        console.log('called 2');
+        done();
+      });
+      ee.emit('ready');
+    });
+    ee.emit('ready');
   }
 
 };
