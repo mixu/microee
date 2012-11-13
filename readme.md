@@ -2,6 +2,8 @@
 
 A client and server side library for routing events.
 
+[![Build Status](https://secure.travis-ci.org/mixu/microee.png?branch=master)](https://travis-ci.org/mixu/microee)
+
 I was disgusted by the size of [MiniEE](https://github.com/mixu/miniee) (122 sloc, 4.4kb), so I decided a rewrite was in order.
 
 This time, without the support for regular expressions - but still with the support for "when", which is my favorite addition to EventEmitters.
