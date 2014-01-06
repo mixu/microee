@@ -1,6 +1,7 @@
 {
   "name": "microee",
   "description": "A tiny EventEmitter-like client and server side library",
+  "license": "BSD",
   "version": "0.0.2",
   "author": {
     "name": "Mikito Takada",
