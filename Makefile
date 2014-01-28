@@ -7,7 +7,7 @@ build:
 	@echo '}({}));' >> ./dist/microee.temp.js
 	@echo 'Wrote ./dist/microee.temp.js'
 	@ls -lah ./dist/
-	@$(COMPRESS) --compress ./dist/microee.temp.js 2> /dev/null > ./dist/microee.js
+	@$(COMPRESS) --compress --mangle sort ./dist/microee.temp.js 2> /dev/null > ./dist/microee.js
 	@rm ./dist/microee.temp.js
 	@echo 'Applied uglifyjs.'
 	@ls -lah ./dist/
