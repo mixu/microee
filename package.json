@@ -20,6 +20,7 @@
     "test": "./node_modules/.bin/mocha --ui exports --reporter spec --bail ./test/microee.test.js"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "uglify-js": "~2.4.12"
   }
 }

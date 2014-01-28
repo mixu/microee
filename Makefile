@@ -1,9 +1,16 @@
+COMPRESS := ./node_modules/.bin/uglifyjs
+
 build:
-	@echo ';(function(module) {' > ./dist/microee.js
-	@cat index.js >> ./dist/microee.js
-	@echo 'microee = module.exports;' >> ./dist/microee.js
-	@echo '}({}));' >> ./dist/microee.js
-	@echo 'Wrote ./dist/microee.js'
+	@echo ';(function(module) {' > ./dist/microee.temp.js
+	@cat index.js >> ./dist/microee.temp.js
+	@echo 'microee = module.exports;' >> ./dist/microee.temp.js
+	@echo '}({}));' >> ./dist/microee.temp.js
+	@echo 'Wrote ./dist/microee.temp.js'
+	@ls -lah ./dist/
+	@$(COMPRESS) --compress ./dist/microee.temp.js 2> /dev/null > ./dist/microee.js
+	@rm ./dist/microee.temp.js
+	@echo 'Applied uglifyjs.'
+	@ls -lah ./dist/
 
 test:
 	@./node_modules/.bin/mocha \
@@ -14,4 +21,3 @@ test:
 	test/microee.test.js
 
 .PHONY: build test
-
