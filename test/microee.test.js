@@ -45,6 +45,17 @@ exports['given a microee'] = {
     assert.equal(2, assertions);
   },
 
+  'can use listeners()': function() {
+    // is array when empty
+    assert.ok(Array.isArray(ee.listeners('test')));
+    ee.on('test', function() { } );
+    ee.on('test', function() { } );
+    // is array on unrelated
+    assert.ok(Array.isArray(ee.listeners('test2')));
+    assert.ok(Array.isArray(ee.listeners('test')));
+    assert.equal(ee.listeners('test').length, 2);
+  },
+
   'can pass an arbitrary number of arguments on events': function(done) {
     ee.on('test', function(a, b, c, d, e, f, g, h) {
       assert.equal(a, 'as');

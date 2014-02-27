@@ -16,6 +16,9 @@ M.prototype = {
     if(!ev) { this._events = {}; }
     else { this._events[ev] && (this._events[ev] = []); }
   },
+  listeners: function(ev) {
+    return (this._events ? this._events[ev] || [] : []);
+  },
   emit: function(ev) {
     this._events || (this._events = {});
     var args = Array.prototype.slice.call(arguments, 1), i, e = this._events[ev] || [];
